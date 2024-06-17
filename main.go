@@ -24,6 +24,8 @@ import (
 	"k8s.io/gengo/parser"
 	"k8s.io/gengo/types"
 	"k8s.io/klog/v2"
+
+	_ "github.com/tigera/image-assurance/operator/api"
 )
 
 var (
