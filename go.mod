@@ -1,15 +1,23 @@
 module github.com/ahmetb/gen-crd-api-reference-docs
 
-go 1.21.0
+go 1.23.1
+
+toolchain go1.23.5
 
 require (
 	github.com/russross/blackfriday/v2 v2.1.0
+	github.com/tigera/operator v1.37.0
 	k8s.io/gengo/v2 v2.0.0-20240404160639-a0386bf69313
 	k8s.io/klog/v2 v2.130.1
 )
 
 require (
-	github.com/go-logr/logr v1.4.1 // indirect
-	golang.org/x/mod v0.14.0 // indirect
-	golang.org/x/tools v0.16.1 // indirect
+	github.com/go-logr/logr v1.4.2 // indirect
+	golang.org/x/mod v0.20.0 // indirect
+	golang.org/x/sync v0.8.0 // indirect
+	golang.org/x/tools v0.24.0 // indirect
 )
+
+replace github.com/tigera/operator => github.com/tigera/operator v1.37.0
+
+replace k8s.io/cloud-provider => k8s.io/cloud-provider v0.0.0-20190409023720-1bc0c81fa51d
