@@ -340,7 +340,7 @@ func isExportedType(t *types.Type) bool {
 	comments := make([]string, 0, len(t.CommentLines)+len(t.SecondClosestCommentLines))
 	comments = append(comments, t.CommentLines...)
 	comments = append(comments, t.SecondClosestCommentLines...)
-	commentTags := types.ExtractCommentTags("+", comments)
+	commentTags := gengo.ExtractCommentTags("+", comments)
 	_, hasGenclient := commentTags["genclient"]
 	_, hasKubeBuilderRootObj := commentTags["kubebuilder:object:root"]
 	return hasGenclient || (hasKubeBuilderRootObj && !isObjectListType(t))
